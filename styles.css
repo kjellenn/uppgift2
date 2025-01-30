@@ -1,8 +1,7 @@
 :root {
     --background: #FFFFFF;
     --primary: #32152f;
-    --detail1: #4E7DA6;
-    --detail2: #1b354f;
+    --detail: #4E7DA6;
 }
 
 body {
@@ -10,6 +9,7 @@ body {
     color: var(--primary);
     font-family: monospace;
     padding: 2%;
+
 }
 
 p {
@@ -19,7 +19,7 @@ p {
 nav {
     font-family: Verdana;
     overflow: hidden;
-    background: var(--detail1);
+    background: var(--detail);
     border-radius: 20px;
 }
 
@@ -37,26 +37,56 @@ nav {
     color: var(--primay);
 }
 
-h1 {
-    padding: 20px;
-}
 
-h3 {
-    padding: 0.5px 20px;
-}
 
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: var(--detail2);
+    background-color: var(--detail);
     color: var(--background);
     margin: 0px;
     padding: 0px;
 
 }
 
-#maillink {
-    color: var(--background);
+@media screen and (min-width: 721px) {
+    h1 {
+        padding: 20px;
+    }
+    
+    h3 {
+        padding: 0.5px 20px;
+    }
+
+    img {
+        width: 100%;
+    }
+    
+    #maillink {
+        color: var(--background);
+    }
+    
+    .textcontainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 4em;
+    }
+    
+}
+
+@media screen and (max-width: 720px) {
+
+    .textcontainer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    img {
+        max-width: 100%;
+    }
+    
 }
