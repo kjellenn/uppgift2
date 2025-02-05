@@ -53,15 +53,16 @@ footer {
 
 @media screen and (min-width: 721px) {
     h1 {
-        padding: 20px;
+        padding: 10px;
     }
     
     h3 {
-        padding: 0.5px 20px;
+        padding: 0.5px 10px;
     }
 
     img {
-        width: 100%;
+        /* max-width: 720px; */
+        max-width: 100%;
     }
     
     #maillink {
@@ -71,22 +72,32 @@ footer {
     .textcontainer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 4em;
+        gap: 3em;
     }
-    
 }
 
 @media screen and (max-width: 720px) {
 
     .textcontainer {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        /* grid-template-columns: repeat(1, 1fr); */
     }
 
     img {
+        max-width: 600px;
         max-width: 100%;
     }
     
 }
+
+/* @media screen and (min-width:1440px) {
+    body {
+        background-color: var(--detail);
+    }
+    #content-main {
+        background-color: var(--background);
+        width: 1440px;
+    }
+} */
