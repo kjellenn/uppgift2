@@ -61,7 +61,6 @@ footer {
     }
 
     img {
-        /* max-width: 720px; */
         max-width: 100%;
     }
     
@@ -82,7 +81,6 @@ footer {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
-        /* grid-template-columns: repeat(1, 1fr); */
     }
 
     img {
