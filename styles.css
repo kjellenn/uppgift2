@@ -12,8 +12,13 @@ body {
 
 }
 
-p {
-    padding: 0.1% 3%;
+@keyframes textstycke {
+    from {transform: scale(0.99,0.99)}
+    to {transform: scale(1,1)}
+}
+
+.textbox {
+    animation: textstycke 0.2s;
 }
 
 nav {
@@ -30,6 +35,7 @@ nav {
     padding: 14px 16px;
     font-size: 30px;
     color: var(--background);
+    transition: all .2s;
 }
 
 .navLink:hover {
@@ -37,6 +43,17 @@ nav {
     color: var(--primay);
 }
 
+h3 {
+    padding-left: 10px
+}
+
+h1 {
+    padding-left: 5px;
+}
+
+p {
+    padding-left: 10px
+}
 
 
 footer {
@@ -51,21 +68,13 @@ footer {
 
 }
 
-@media screen and (min-width: 721px) {
-    h1 {
-        padding: 10px;
-    }
-    
-    h3 {
-        padding: 0.5px 10px;
-    }
+#maillink {
+    color: var(--background);
+}
 
+@media screen and (min-width: 721px) {
     img {
         max-width: 100%;
-    }
-    
-    #maillink {
-        color: var(--background);
     }
     
     .textcontainer {
@@ -76,6 +85,7 @@ footer {
 }
 
 @media screen and (max-width: 720px) {
+
 
     .textcontainer {
         display: flex;
@@ -89,13 +99,3 @@ footer {
     }
     
 }
-
-/* @media screen and (min-width:1440px) {
-    body {
-        background-color: var(--detail);
-    }
-    #content-main {
-        background-color: var(--background);
-        width: 1440px;
-    }
-} */
